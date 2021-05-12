@@ -1,3 +1,4 @@
+import sys
 class server:
 
     def get_server_name(self):
@@ -12,12 +13,12 @@ class server:
         if option == "no":
             sys.exit()
         else:
-            self.get_server_name()
+            d.greeting()
 
 
 d = server()
 d.get_server_name()
-d.greeting()
+d.sign_in()
 
 
 
