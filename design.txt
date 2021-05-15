@@ -1,0 +1,6 @@
+Server sign in and out
+Menu system for servers to choose from for ordering and closing orders etc. 
+table display
+
+Tables will be from 1 to 10.
+

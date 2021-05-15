@@ -1,6 +1,11 @@
 import sys
 class server:
 
+    def __init__(self):
+        self.tacos = 4.99
+        self.bill = 0.00
+
+    
     def get_server_name(self):
         self.server_name = input("Enter your name")
         
@@ -11,7 +16,6 @@ class server:
         print("Signing out " , self.server_name)
 
     def sign_in(self):
-
         option = input("Do you want to sign in? yes or no?")
         if option == "no":
             sys.exit()
@@ -21,10 +25,27 @@ class server:
     def sign_out(self):
         option = input("Do you want to sign out? yes or no?")
 
-        if option == "no":
+        if option == "yes":
             sys.exit()
         else:
             d.sign_out_message()
+
+    def order(self):
+        customer = input("what do you want to order? Enter 1 for a taco. Enter 2 for a burrito.")
+        if customer == 1:
+            print("You ordered a taco")
+            self.bill = 3.99
+        elif customer == 2:
+            print("We dont got burritos")
+        else:
+            print("We dont have that!")
+
+    def get_bill(self):
+        print("Here is your bill")
+        print("Bill: ", "$", self.bill)
+        
+
+
 
 
 #Testing server function
@@ -32,6 +53,8 @@ d = server()
 d.get_server_name()
 d.sign_in()
 d.sign_out()
+d.order()
+d.get_bill()
 
 
 
