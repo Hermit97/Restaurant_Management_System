@@ -3,7 +3,6 @@ class server:
 
     def __init__(self):
         self.tacos = 4.99
-        self.bill = 0.00
 
     
     def get_server_name(self):
@@ -34,7 +33,7 @@ class server:
         customer = input("what do you want to order? Enter 1 for a taco. Enter 2 for a burrito.")
         if customer == 1:
             print("You ordered a taco")
-            self.bill = 3.99
+            self.tacos
         elif customer == 2:
             print("We dont got burritos")
         else:
@@ -42,7 +41,7 @@ class server:
 
     def get_bill(self):
         print("Here is your bill")
-        print("Bill: ", "$", self.bill)
+        print("Bill: ", "$", self.tacos)
         
 
 
