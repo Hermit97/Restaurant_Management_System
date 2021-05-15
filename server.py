@@ -6,7 +6,10 @@ class server:
 
     
     def get_server_name(self):
-        self.server_name = input("Enter your name")
+        self.server_name = str(input("Enter your name"))
+        if self.server_name.isdigit():
+            print("No numbers allowed")
+            sys.exit()
         
     def greeting(self):
         print("welcome ",self.server_name) 
@@ -23,7 +26,6 @@ class server:
 
     def sign_out(self):
         option = input("Do you want to sign out? yes or no?")
-
         if option == "yes":
             sys.exit()
         else:
@@ -44,9 +46,6 @@ class server:
         print("Bill: ", "$", self.tacos)
         
 
-
-
-
 #Testing server function
 d = server()
 d.get_server_name()
@@ -54,9 +53,3 @@ d.sign_in()
 d.sign_out()
 d.order()
 d.get_bill()
-
-
-
-
-
-
